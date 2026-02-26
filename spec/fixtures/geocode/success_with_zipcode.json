@@ -1,0 +1,88 @@
+{
+  "results":[
+    {
+      "address_components":[
+        {
+          "long_name":"Avenida Paulista",
+          "short_name":"Av. Paulista",
+          "types":[
+            "route"
+          ]
+        },
+        {
+          "long_name":"Bela Vista",
+          "short_name":"Bela Vista",
+          "types":[
+            "sublocality_level_1",
+            "sublocality",
+            "political"
+          ]
+        },
+        {
+          "long_name":"São Paulo",
+          "short_name":"São Paulo",
+          "types":[
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name":"State of São Paulo",
+          "short_name":"SP",
+          "types":[
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name":"Brazil",
+          "short_name":"BR",
+          "types":[
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name":"01310-100",
+          "short_name":"01310-100",
+          "types":[
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address":"Av. Paulista - Bela Vista, São Paulo - SP, 01310-100, Brazil",
+      "geometry":{
+        "bounds":{
+          "northeast":{
+            "lat":-23.5613824,
+            "lng":-46.6382913
+          },
+          "southwest":{
+            "lat":-23.5988698,
+            "lng":-46.6690788
+          }
+        },
+        "location":{
+          "lat":-23.5631994,
+          "lng":-46.6543783
+        },
+        "location_type":"GEOMETRIC_CENTER",
+        "viewport":{
+          "northeast":{
+            "lat":-23.5613824,
+            "lng":-46.6382913
+          },
+          "southwest":{
+            "lat":-23.5988698,
+            "lng":-46.6690788
+          }
+        }
+      },
+      "place_id":"ChIJLfyBonJZzpQRzMGbYjWPfl4",
+      "types":[
+        "route"
+      ]
+    }
+  ],
+  "status":"OK"
+}
