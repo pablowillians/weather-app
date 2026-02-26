@@ -56,6 +56,8 @@ group :development, :test do
   gem "dotenv-rails"
 
   gem "rspec-rails", "~> 8.0"
+
+  gem "rdoc", "~> 7.2"
 end
 
 group :development do

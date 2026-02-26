@@ -24,3 +24,7 @@ This is a weather app that allows you to search for a location and get the curre
 ## Running Tests
 
 Run `bin/rspec` to run the tests
+
+## Generating Documentation
+
+Run `bin/doc` to generate the documentation in the `doc/rdoc` directory.
