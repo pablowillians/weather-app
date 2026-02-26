@@ -1,0 +1,11 @@
+common: &common
+  google_places_api_key: <%= ENV.fetch("GOOGLE_PLACES_API_KEY") %>
+
+development:
+  <<: *common
+
+production:
+  <<: *common
+
+test:
+  google_places_api_key: sample_google_places_api_key

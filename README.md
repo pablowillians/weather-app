@@ -16,9 +16,10 @@ This is a weather app that allows you to search for a location and get the curre
 ## Setup
 
 1. Clone the repository
-2. Run `bin/setup` to install dependencies and set up the database
-3. Run `bin/rails server` to start the server
-4. Visit `http://localhost:3000` in your browser
+2. Copy the `.env.example` file to `.env` and add your Google Places API key
+3. If you are running for the first time, run `bin/setup` to install dependencies and set up the database.
+4. Run `bin/dev` to start the development server
+5. Visit `http://localhost:3000` in your browser
 
 ## Running Tests
 
