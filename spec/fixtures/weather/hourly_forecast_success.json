@@ -1,0 +1,103 @@
+{
+  "forecastHours": [
+    {
+      "interval": {
+        "startTime": "2025-01-28T22:00:00Z",
+        "endTime": "2025-01-28T23:00:00Z"
+      },
+      "displayDateTime": {
+        "year": 2025,
+        "month": 1,
+        "day": 28,
+        "hours": 19,
+        "utcOffset": "-10800s"
+      },
+      "isDaytime": true,
+      "weatherCondition": {
+        "iconBaseUri": "https://maps.gstatic.com/weather/v1/partly_cloudy",
+        "description": {
+          "text": "Partly cloudy",
+          "languageCode": "en"
+        },
+        "type": "PARTLY_CLOUDY"
+      },
+      "temperature": {
+        "degrees": 25.3,
+        "unit": "CELSIUS"
+      },
+      "feelsLikeTemperature": {
+        "degrees": 26.1,
+        "unit": "CELSIUS"
+      },
+      "relativeHumidity": 65,
+      "uvIndex": 5,
+      "precipitation": {
+        "probability": {
+          "percent": 10,
+          "type": "RAIN"
+        }
+      },
+      "wind": {
+        "direction": {
+          "degrees": 180,
+          "cardinal": "SOUTH"
+        },
+        "speed": {
+          "value": 12,
+          "unit": "KILOMETERS_PER_HOUR"
+        }
+      }
+    },
+    {
+      "interval": {
+        "startTime": "2025-01-28T23:00:00Z",
+        "endTime": "2025-01-29T00:00:00Z"
+      },
+      "displayDateTime": {
+        "year": 2025,
+        "month": 1,
+        "day": 28,
+        "hours": 20,
+        "utcOffset": "-10800s"
+      },
+      "isDaytime": true,
+      "weatherCondition": {
+        "iconBaseUri": "https://maps.gstatic.com/weather/v1/cloudy",
+        "description": {
+          "text": "Cloudy",
+          "languageCode": "en"
+        },
+        "type": "CLOUDY"
+      },
+      "temperature": {
+        "degrees": 24.1,
+        "unit": "CELSIUS"
+      },
+      "feelsLikeTemperature": {
+        "degrees": 24.8,
+        "unit": "CELSIUS"
+      },
+      "relativeHumidity": 70,
+      "uvIndex": 3,
+      "precipitation": {
+        "probability": {
+          "percent": 20,
+          "type": "RAIN"
+        }
+      },
+      "wind": {
+        "direction": {
+          "degrees": 190,
+          "cardinal": "SOUTH"
+        },
+        "speed": {
+          "value": 10,
+          "unit": "KILOMETERS_PER_HOUR"
+        }
+      }
+    }
+  ],
+  "timeZone": {
+    "id": "America/Sao_Paulo"
+  }
+}

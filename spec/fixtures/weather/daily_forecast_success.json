@@ -1,0 +1,113 @@
+{
+  "forecastDays": [
+    {
+      "interval": {
+        "startTime": "2025-01-28T03:00:00Z",
+        "endTime": "2025-01-29T03:00:00Z"
+      },
+      "displayDate": {
+        "year": 2025,
+        "month": 1,
+        "day": 28
+      },
+      "sunrise": "2025-01-28T08:35:00Z",
+      "sunset": "2025-01-28T21:50:00Z",
+      "maxTemperature": {
+        "degrees": 28.5,
+        "unit": "CELSIUS"
+      },
+      "minTemperature": {
+        "degrees": 19.3,
+        "unit": "CELSIUS"
+      },
+      "daytimeForecast": {
+        "weatherCondition": {
+          "iconBaseUri": "https://maps.gstatic.com/weather/v1/partly_cloudy",
+          "description": {
+            "text": "Partly cloudy",
+            "languageCode": "en"
+          },
+          "type": "PARTLY_CLOUDY"
+        },
+        "precipitation": {
+          "probability": {
+            "percent": 10,
+            "type": "RAIN"
+          }
+        }
+      },
+      "nighttimeForecast": {
+        "weatherCondition": {
+          "iconBaseUri": "https://maps.gstatic.com/weather/v1/cloudy",
+          "description": {
+            "text": "Cloudy",
+            "languageCode": "en"
+          },
+          "type": "CLOUDY"
+        },
+        "precipitation": {
+          "probability": {
+            "percent": 30,
+            "type": "RAIN"
+          }
+        }
+      }
+    },
+    {
+      "interval": {
+        "startTime": "2025-01-29T03:00:00Z",
+        "endTime": "2025-01-30T03:00:00Z"
+      },
+      "displayDate": {
+        "year": 2025,
+        "month": 1,
+        "day": 29
+      },
+      "sunrise": "2025-01-29T08:36:00Z",
+      "sunset": "2025-01-29T21:49:00Z",
+      "maxTemperature": {
+        "degrees": 30.1,
+        "unit": "CELSIUS"
+      },
+      "minTemperature": {
+        "degrees": 20.5,
+        "unit": "CELSIUS"
+      },
+      "daytimeForecast": {
+        "weatherCondition": {
+          "iconBaseUri": "https://maps.gstatic.com/weather/v1/sunny",
+          "description": {
+            "text": "Sunny",
+            "languageCode": "en"
+          },
+          "type": "CLEAR"
+        },
+        "precipitation": {
+          "probability": {
+            "percent": 5,
+            "type": "RAIN"
+          }
+        }
+      },
+      "nighttimeForecast": {
+        "weatherCondition": {
+          "iconBaseUri": "https://maps.gstatic.com/weather/v1/partly_cloudy",
+          "description": {
+            "text": "Partly cloudy",
+            "languageCode": "en"
+          },
+          "type": "PARTLY_CLOUDY"
+        },
+        "precipitation": {
+          "probability": {
+            "percent": 15,
+            "type": "RAIN"
+          }
+        }
+      }
+    }
+  ],
+  "timeZone": {
+    "id": "America/Sao_Paulo"
+  }
+}
