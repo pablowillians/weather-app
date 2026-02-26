@@ -2,6 +2,10 @@
 
 This is a weather app that allows you to search for a location and get the current weather and forecast for that location.
 
+## Documentation
+
+Access the documentation at [https://pablowillians.github.io/weather-app/](https://pablowillians.github.io/weather-app/).
+
 ## Features
 
 - [ ] Search for a location and get the current weather and forecast for that location.
@@ -27,4 +31,4 @@ Run `bin/rspec` to run the tests
 
 ## Generating Documentation
 
-Run `bin/doc` to generate the documentation in the `doc/rdoc` directory.
+Documentation is written in **Markdown** in the code comments and in this README. Run `bin/doc` to generate the static RDoc site in `doc/rdoc` (and open it in the browser). The same docs are deployed to GitHub Pages on push to `main`.

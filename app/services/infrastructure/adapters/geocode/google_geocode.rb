@@ -7,11 +7,21 @@ module Services
         class Error < StandardError; end
         class NotFoundError < Error; end
 
-        # Google Geocode API Adapter
-        # This adapter is used to fetch geocoding data from the Google Geocode API.
+        # ## Google Geocode API Adapter
         #
-        # @example
-        #   Services::Infrastructure::Adapters::Geocode::GoogleGeocode.new.call("São Paulo, Brazil")
+        # Fetches geocoding data from the [Google Geocode API](https://developers.google.com/maps/documentation/geocoding/start).
+        # Responses are cached for 7 days per address.
+        #
+        # ### Example
+        #
+        # ```ruby
+        # adapter = Services::Infrastructure::Adapters::Geocode::GoogleGeocode.new
+        # response = adapter.call("São Paulo, Brazil")
+        # response.latitude   # => -23.5505
+        # response.longitude  # => -46.6333
+        # response.zipcode    # => "01310-100"
+        # response.source     # => :api_response
+        # ```
         class GoogleGeocode
           BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json"
 
@@ -20,16 +30,20 @@ module Services
             @cache = Rails.cache
           end
 
-          # Calls the Google Geocode API and returns a GoogleGeocodeResponse.
+          # Calls the Google Geocode API and returns a **GoogleGeocodeResponse**.
           #
-          # @param address [String] The address to geocode.
+          # ### Parameters
           #
-          # @example
-          #   Services::Infrastructure::Adapters::Geocode::GoogleGeocode.new.call("São Paulo, Brazil")
+          # - **address** (`String`) — Address or place name to geocode.
           #
-          # @return GoogleGeocodeResponse
+          # ### Returns
           #
-          # @see https://developers.google.com/maps/documentation/geocoding/start
+          # - `GoogleGeocodeResponse` with `latitude`, `longitude`, `zipcode` and `source` (`:api_response` or `:cached_response`).
+          #
+          # ### Raises
+          #
+          # - `NotFoundError` when the API returns no results for the address.
+          # - `Error` when the HTTP request fails.
           def call(address)
             uri = URI.parse(BASE_URL)
             uri.query = URI.encode_www_form({

@@ -1,0 +1,20 @@
+---
+main_page: README.md
+title: Weather App - Documentation
+op_dir: doc/rdoc
+markup: markdown
+line_numbers: true
+tab_width: 2
+all: true
+exclude:
+  - vendor/**/*
+  - tmp/**/*
+  - log/**/*
+  - node_modules/**/*
+  - db/**/*
+  - bin/**/*
+  - config/**/*
+  - spec/**/*
+  - test/**/*
+  - storage/**/*
+  - public/**/*
