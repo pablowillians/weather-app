@@ -23,7 +23,7 @@ Before running the application, you need to create a Google Places API key. Go t
 
 ### Steps
 
-1. Clone the repository
+1. Clone the [repository](https://github.com/pablowillians/weather-app).
 2. Copy the `.env.example` file to `.env` and add your Google Places API key
 3. If you are running for the first time, run `bin/setup` to install dependencies and set up the database.
 4. Run `bin/dev` to start the development server
