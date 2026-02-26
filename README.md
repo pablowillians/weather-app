@@ -1,24 +1,25 @@
-# README
+# Weather App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a weather app that allows you to search for a location and get the current weather and forecast for that location.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- [ ] Search for a location and get the current weather and forecast for that location.
 
-* System dependencies
+## Technologies
 
-* Configuration
+- Ruby 3.4.5
+- Ruby on Rails 8.1.2
+- RSpec 8.0
+- Dotenv
 
-* Database creation
+## Setup
 
-* Database initialization
+1. Clone the repository
+2. Run `bin/setup` to install dependencies and set up the database
+3. Run `bin/rails server` to start the server
+4. Visit `http://localhost:3000` in your browser
 
-* How to run the test suite
+## Running Tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run `bin/rspec` to run the tests
