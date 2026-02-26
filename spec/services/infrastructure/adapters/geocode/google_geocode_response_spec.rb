@@ -64,4 +64,19 @@ RSpec.describe Services::Infrastructure::Adapters::Geocode::GoogleGeocodeRespons
       end
     end
   end
+
+  describe "#formatted_address" do
+    it "returns the formatted_address from the first result" do
+      response = described_class.new(load_geocode_fixture("success_with_zipcode"), :api_response)
+
+      expect(response.formatted_address).to eq("Av. Paulista - Bela Vista, São Paulo - SP, 01310-100, Brazil")
+    end
+
+    it "returns nil when formatted_address is absent" do
+      data = load_geocode_fixture("success_with_zipcode").tap { |h| h["results"].first.delete("formatted_address") }
+      response = described_class.new(data, :api_response)
+
+      expect(response.formatted_address).to be_nil
+    end
+  end
 end

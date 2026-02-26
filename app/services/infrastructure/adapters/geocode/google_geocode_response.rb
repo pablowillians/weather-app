@@ -8,6 +8,7 @@ module Services
         #
         # - **latitude** / **longitude** — from `geometry.location`
         # - **zipcode** — from the first `postal_code` in `address_components`
+        # - **formatted_address** — from the first result's `formatted_address` (canonical place name)
         # - **source** — `:api_response` or `:cached_response`
         #
         # ### Example
@@ -46,6 +47,11 @@ module Services
           def zipcode
             component = result["address_components"]&.find { |c| c["types"]&.include?("postal_code") }
             component&.dig("short_name")
+          end
+
+          # Canonical place name from the first result's `formatted_address`, or `nil`.
+          def formatted_address
+            result["formatted_address"]&.presence
           end
 
           private
