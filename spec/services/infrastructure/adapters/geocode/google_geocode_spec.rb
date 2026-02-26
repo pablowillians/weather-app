@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe Services::Infrastructure::Adapters::Geocode::GoogleGeocode do
-
   let(:cache) { instance_double(ActiveSupport::Cache::Store) }
   let(:address) { "São Paulo, Brazil" }
   let(:cache_key) { "google_geocode_#{address}" }
