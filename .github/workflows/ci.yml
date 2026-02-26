@@ -36,6 +36,9 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Set up .env
+        run: cp .env.example .env
+
       - name: Scan for security vulnerabilities in JavaScript dependencies
         run: bin/importmap audit
 
@@ -83,6 +86,9 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Set up .env
+        run: cp .env.example .env
+
       - name: Run tests
         env:
           RAILS_ENV: test
@@ -107,6 +113,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+
+      - name: Set up .env
+        run: cp .env.example .env
 
       - name: Run System Tests
         env:
