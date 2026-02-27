@@ -1,5 +1,5 @@
 common: &common
-  google_places_api_key: <%= ENV.fetch("GOOGLE_PLACES_API_KEY") %>
+  google_places_api_key: <%= ENV.fetch("GOOGLE_PLACES_API_KEY", "invalid_google_places_api_key") %>
 
 development:
   <<: *common

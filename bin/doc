@@ -10,6 +10,6 @@ end
 
 FileUtils.chdir APP_ROOT do
   puts "== Generating RDoc documentation =="
-  system! "bundle exec rdoc README.md app/services"
+  system! "bundle exec rdoc README.md app/controllers app/helpers app/services"
   system "open ./doc/rdoc/index.html"
 end
