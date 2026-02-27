@@ -14,7 +14,7 @@ module Services
           def response_class = GoogleHourlyForecastResponse
           def response_key = "forecastHours"
           def error_label = "hourly forecast"
-          def extra_params = { hours: 12 }
+          def extra_params = { hours: 6 }
         end
       end
     end

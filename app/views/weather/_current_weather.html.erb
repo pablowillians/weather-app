@@ -1,0 +1,28 @@
+<section class="flex flex-col items-center justify-center py-14 text-center gap-2 relative overflow-hidden rounded-[2rem] border border-zinc-800/50 bg-gradient-to-b from-zinc-800/10 to-transparent backdrop-blur-md">
+  <div class="absolute top-0 inset-x-0 h-48 bg-blue-500/5 blur-[80px] pointer-events-none"></div>
+  <div class="absolute top-4 right-5"><%= weather_source_badge(@result, :current_weather) %></div>
+
+  <h1 class="text-2xl font-normal tracking-tight text-zinc-100 mt-2">
+    <%= location.formatted_address.presence || @address %>
+  </h1>
+
+  <div class="text-7xl font-light tracking-tighter text-white my-1 flex items-start">
+    <%= current.temperature_degrees.round.to_s %><span class="text-4xl mt-2 block font-light text-zinc-500">°</span>
+  </div>
+
+  <p class="text-lg font-normal text-zinc-300 capitalize tracking-tight flex items-center gap-2">
+    <%= current.weather_condition.description %>
+  </p>
+
+  <% if @result.daily_forecast_entries.any? %>
+    <% today_entry = @result.daily_forecast_entries.first %>
+    <div class="flex items-center gap-3 text-sm font-normal text-zinc-500 mt-1">
+      <span>H: <%= today_entry.max_temperature_degrees.round.to_s %>°</span>
+      <span>L: <%= today_entry.min_temperature_degrees.round.to_s %>°</span>
+    </div>
+  <% end %>
+
+  <div class="text-sm font-normal text-zinc-500">
+    Feels like <%= current.feels_like_degrees.round.to_s %>°
+  </div>
+</section>

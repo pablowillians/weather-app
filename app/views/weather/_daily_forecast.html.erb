@@ -1,0 +1,48 @@
+<% if @result.daily_forecast_entries.any? %>
+  <% daily_entries = @result.daily_forecast_entries %>
+  <% global_min = daily_entries.map(&:min_temperature_degrees).min %>
+  <% global_max = daily_entries.map(&:max_temperature_degrees).max %>
+
+  <section class="flex flex-col gap-3">
+    <div class="flex items-center justify-between px-1">
+      <div class="flex items-center gap-2 text-xs font-medium text-zinc-500 uppercase tracking-widest">
+        <span class="material-symbols-outlined text-sm">calendar_month</span>
+        Daily Forecast
+      </div>
+      <%= weather_source_badge(@result, :daily_forecast) %>
+    </div>
+
+    <div class="flex flex-col bg-zinc-900/30 border border-zinc-800/50 rounded-[2rem] backdrop-blur-sm divide-zinc-800/40">
+      <% daily_entries.each_with_index do |entry, i| %>
+        <% is_today = i == 0 %>
+
+        <div class="flex items-center justify-between p-4 px-5 transition-colors hover:bg-zinc-800/20">
+          <span class="w-1/4 text-sm <%= is_today ? 'font-medium text-zinc-100' : 'font-normal text-zinc-400' %>">
+            <%= is_today ? "Today" : Date.parse(entry.display_date.to_s).strftime("%A") %>
+          </span>
+
+          <div class="w-1/4 flex justify-center">
+            <%= weather_condition_icon_tag(entry.weather_condition, size: 24) %>
+          </div>
+
+          <div class="w-2/4 flex items-center justify-end gap-3">
+            <span class="text-sm font-normal text-zinc-500 w-6 text-right">
+              <%= entry.min_temperature_degrees.round.to_s %>°
+            </span>
+
+            <div class="flex-1 h-1 rounded-full bg-zinc-800/80 overflow-hidden relative min-w-[80px]">
+              <div
+                class="absolute h-full rounded-full bg-gradient-to-r from-blue-600/80 to-orange-400/80"
+                style="<%= weather_temp_bar_style(entry.min_temperature_degrees, entry.max_temperature_degrees, global_min, global_max) %>">
+              </div>
+            </div>
+
+            <span class="text-sm w-6 text-right <%= is_today ? 'font-medium text-zinc-100' : 'font-normal text-zinc-200' %>">
+              <%= entry.max_temperature_degrees.round.to_s %>°
+            </span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+<% end %>
